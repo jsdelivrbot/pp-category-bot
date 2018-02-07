@@ -10,20 +10,20 @@ var request = require('request');
 const Agent = require('node-agent-sdk').Agent;
 var botAgent = new Agent({
     accountId: process.env.LP_ACCOUNT_ID,
-    username: 'categorybot',
-    appKey: 'bc2a7e11efe741fa90d996af48cbc980',
-    secret: '3f7dc20c83cbd4e0',
-    accessToken: '90141da2e07c4491a93ee6aa256cade4',
-    accessTokenSecret: '337be936f00409c7'
+    username: process.env.LP_ACCOUNT_USER,
+    appKey: process.env.LP_ACCOUNT_APP_KEY,
+    secret: process.env.LP_ACCOUNT_SECRET,
+    accessToken: process.env.LP_ACCOUNT_ACCESS_TOKEN,
+    accessTokenSecret: process.env.LP_ACCOUNT_ACCESS_TOKEN_SECRET
 });
 
 
 // API oauth1 credentials
 var oauth = {
-    consumer_key: '9a3b1b4ebae44338926590d3a2b3e47f',
-    consumer_secret: '1b5271b1f96a25f7',
-    token: '6eedf0766168494bb2f76ab0ccc66a6c',
-    token_secret: '511d332fce93d061'
+    consumer_key: process.env.LP_API_CONSUMER_KEY,
+    consumer_secret: process.env.LP_API_CONSUMER_SECRET,
+    token: process.env.LP_API_TOKEN,
+    token_secret: process.env.LP_API_TOKEN_SECRET
 };
 var allSkills = [];
 var Level1 = "";
