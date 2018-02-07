@@ -4,7 +4,7 @@ var express = require('express');
 // Get around heroku time-out
 var https = require('https');
 setInterval(function() {
-    https.get("https://pp-category-bot.herokuapp.com/");
+    https.get("https://pp-category-bot.herokuapp.com");
 }, 600000); // every 5 minutes (300000) every 10 minutes (600000)
 var request = require('request');
 const Agent = require('node-agent-sdk').Agent;
